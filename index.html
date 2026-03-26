@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Job Tracker Page</title>
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+    </head>
+    <body class="w-full bg-[#F8FAFC] min-h-screen">
+        <header>
+        <div class="w-9/12 mx-auto pt-14">
+            <h1 class="font-bold text-3xl pb-4">Job Application Tracker</h1>
+            <div class="grid grid-cols-3 grid-rows-1 gap-4">
+                <div class="bg-[#ffffff] p-4 rounded-md">
+                    <p>Total</p>
+                    <h2 class="text-lg font-bold" id="total-job">8</h2>
+                </div>
+                <div class="bg-[#ffffff] p-4 rounded-md ">
+                    <p>Interview</p>
+                    <h2 class="text-[green] text-lg font-bold" id="interview-count">0</h2>
+                </div>
+                <div class="bg-[#ffffff] p-4 rounded-md">
+                    <p>Rejected</p>
+                    <h2 class="text-[red] text-lg font-bold" id="reject-count">0</h2>
+                </div>
+            </div>
+            <hr class="mt-8 mb-8 border-1 border-[#E6E7E9]">
+        </div>
+    </header>
+    <main class="w-9/12 mx-auto pb-10">
+        <section>
+            <div class="flex justify-between">
+                <div>
+                    <h3 class="text-lg font-bold">Available jobs</h3>
+                </div>
+                <div id="toShowOutof">8 Jobs</div>
+            </div>
+            <div class="pt-6 grid gap-6 grid-cols-3 lg:w-5/12 md:w-8/12 sm:w-11/12">
+                <div class="btn btn-nutral pl-10 pr-10" id="btn-all" onclick="tab('all')">All</div>
+                <div class="btn btn-nutral pl-10 pr-10" id="btn-interview" onclick="tab('interview')">Interview</div>
+                <div class="btn btn-nutral pl-10 pr-10" id="btn-reject" onclick="tab('reject')">Rejected</div>
+            </div>
+        </section>
+    </main>
+    </body>
+</html>
